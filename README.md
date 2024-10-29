@@ -25,7 +25,7 @@ Assurez-vous d'avoir les outils suivants installés sur votre machine :
 3. **Installer ces composants par ordre via les manifests en utilisant ces commandes :**
 
     ```bash
-    minikube start --nodes 3 --driver=docker
+    minikube start --network-plugin=cni --cni=calico --nodes 3 --driver=docker
     kubectl apply -f database-configmap.yaml
     kubectl apply -f database-secret.yaml
     kubectl apply -f database-deployment.yaml
