@@ -26,4 +26,7 @@ spec:
                   name: mysecret
                   key: password
             - name: MYSQL_DATABASE
-              value: flask_db
+              valueFrom:
+                configMapKeyRef:
+                  name: my-configmap         
+                  key: DB_NAME
